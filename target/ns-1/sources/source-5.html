@@ -1,0 +1,131 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Triangulo</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">codigos</a>
+</div>
+
+<h1>Coverage Summary for Class: Triangulo (codigos)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Triangulo</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/12)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package codigos;
+<i class="no-highlight">2</i>&nbsp;
+<b class="nc"><i class="no-highlight">3</i>&nbsp;public class Triangulo {</b>
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;    public static String classificaTriangulo(int LA, int LB, int LC) throws LadoInvalidoException{
+<b class="nc"><i class="no-highlight">6</i>&nbsp;        String resposta=&quot;&quot;;</b>
+<b class="nc"><i class="no-highlight">7</i>&nbsp;        if (LA&lt;=0 || LB &lt;=0 || LC &lt;0)</b>
+<b class="nc"><i class="no-highlight">8</i>&nbsp;            throw new LadoInvalidoException(&quot;lado invalido&quot;);</b>
+<i class="no-highlight">9</i>&nbsp;
+<b class="nc"><i class="no-highlight">10</i>&nbsp;        if ( (LA &gt;= LB + LC) || (LB &gt;= LA + LC) || (LC &gt; LA + LB))</b>
+<b class="nc"><i class="no-highlight">11</i>&nbsp;            resposta = &quot;NAO FORMA TRIANGULO&quot;;</b>
+<i class="no-highlight">12</i>&nbsp;        else
+<i class="no-highlight">13</i>&nbsp;        {
+<b class="nc"><i class="no-highlight">14</i>&nbsp;            if (LA==LB &amp;&amp; LB==LC)</b>
+<b class="nc"><i class="no-highlight">15</i>&nbsp;                resposta = &quot;EQUILATERO&quot;;</b>
+<i class="no-highlight">16</i>&nbsp;            else
+<i class="no-highlight">17</i>&nbsp;            {
+<b class="nc"><i class="no-highlight">18</i>&nbsp;                if (LA==LB || LB==LC || LA==LC)</b>
+<b class="nc"><i class="no-highlight">19</i>&nbsp;                    resposta = &quot;ISOSCELES&quot;;</b>
+<i class="no-highlight">20</i>&nbsp;                else
+<b class="nc"><i class="no-highlight">21</i>&nbsp;                    resposta = &quot;ESCALENO&quot;;</b>
+<i class="no-highlight">22</i>&nbsp;            }
+<i class="no-highlight">23</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">24</i>&nbsp;        return resposta;</b>
+<i class="no-highlight">25</i>&nbsp;    }
+<i class="no-highlight">26</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-07-11 13:55</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WordsTest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SIN50222021AUTOMACAO$WordsTest.exec</a> &gt; <a href="index.source.html" class="el_package">codigos</a> &gt; <span class="el_source">WordsTest.java</span></div><h1>WordsTest.java</h1><pre class="source lang-java linenums">package codigos;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+<span class="fc" id="L9">public class WordsTest {</span>
+
+    private Words words;
+
+    @Before
+    public void setup(){
+<span class="fc" id="L15">        System.out.println(&quot;Antes de cada teste&quot;);</span>
+<span class="fc" id="L16">        words = new Words();</span>
+<span class="fc" id="L17">    }</span>
+
+    @Test
+    public void testv1() throws Exception {
+<span class="fc" id="L21">        assertEquals(-1,words.countWords(null));</span>
+<span class="fc" id="L22">    }</span>
+
+    @Test
+    public void testv2() throws Exception {
+<span class="fc" id="L26">        assertEquals(0,words.countWords(&quot;um&quot;));</span>
+<span class="fc" id="L27">    }</span>
+
+    @Test
+    public void testv3() throws Exception {
+<span class="fc" id="L31">        assertEquals(0,words.countWords(&quot;rato&quot;));</span>
+<span class="fc" id="L32">    }</span>
+
+    @Test
+    public void testv4() throws Exception {
+<span class="fc" id="L36">        assertEquals(0,words.countWords(&quot;sapo&quot;));</span>
+<span class="fc" id="L37">    }</span>
+
+    @Test
+    public void testv5() throws Exception {
+<span class="fc" id="L41">        assertEquals(0,words.countWords(&quot;rato sapo&quot;));</span>
+<span class="fc" id="L42">    }</span>
+
+    @Test
+    public void testv6() throws Exception {
+<span class="fc" id="L46">        assertEquals(1,words.countWords(&quot;andar&quot;));</span>
+<span class="fc" id="L47">    }</span>
+
+    @Test
+    public void testv7() throws Exception {
+<span class="fc" id="L51">        assertEquals(1,words.countWords(&quot;rato andar&quot;));</span>
+<span class="fc" id="L52">    }</span>
+
+    @Test
+    public void testv8() throws Exception {
+<span class="fc" id="L56">        assertEquals(1,words.countWords(&quot;sapos&quot;));</span>
+<span class="fc" id="L57">    }</span>
+
+    @Test
+    public void testv9() throws Exception {
+<span class="fc" id="L61">        assertEquals(1,words.countWords(&quot;sapo sapos&quot;));</span>
+<span class="fc" id="L62">    }</span>
+
+    @Test
+    public void testv10() throws Exception {
+<span class="fc" id="L66">        assertEquals(2,words.countWords(&quot;andar sapos&quot;));</span>
+<span class="fc" id="L67">    }</span>
+
+    @Test
+    public void testv11() throws Exception {
+<span class="fc" id="L71">        assertEquals(0,words.countWords(&quot;r s&quot;));</span>
+<span class="fc" id="L72">    }</span>
+
+    @Test
+    public void testv12() throws Exception {
+<span class="fc" id="L76">        assertEquals(0,words.countWords(&quot;s r&quot;));</span>
+<span class="fc" id="L77">    }</span>
+
+
+    @Test
+    public void testv13() throws Exception {
+<span class="fc" id="L82">        assertEquals(0,words.countWords(&quot;t u&quot;));</span>
+<span class="fc" id="L83">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
